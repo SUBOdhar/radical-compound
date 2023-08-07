@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Radical Compounds</title>
+    <style>
+        /* Add the selected Google Fonts URL to the head section */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            /* Apply the selected font to the header */
+        }
+
+        h1 {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            /* Apply the selected font to the h1 element */
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px auto;
+            max-width: 1200px;
+            /* Set a maximum width for the list */
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        li {
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            width: 30%;
+            /* Adjust the width as needed */
+            height: 0;
+            padding-bottom: 30%;
+            /* Set height equal to width for square box */
+            margin: 0 15px 30px 0;
+            /* Add margin to separate the boxes */
+            font-family: 'Poppins', sans-serif;
+            /* Apply the selected font to the list items */
+            position: relative;
+            /* Required for the text animation */
+            overflow: hidden;
+            /* Hide the overflow of the symbol */
+            cursor: pointer;
+            /* Add cursor pointer on hover */
+            transition: background-color 0.3s;
+            text-align: center;
+            /* Center-align the content horizontally */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Add a custom class for positive charge boxes */
+        .positive-charge:hover {
+            background-color: #ff8080;
+            /* Red color on hover for positive charge boxes */
+        }
+
+        /* Add a custom class for negative charge boxes */
+        .negative-charge:hover {
+            background-color: #80bfff;
+            /* Blue color on hover for negative charge boxes */
+        }
+
+        /* Add a custom class for neutral charge boxes */
+        .neutral-charge:hover {
+            background-color: #80ff80;
+            /* Green color on hover for neutral charge boxes */
+        }
+
+        li span {
+            display: inline-block;
+            text-align: center;
+            /* Center-align the text */
+        }
+
+        li span.name {
+            font-size: 20px;
+            /* Set the font size for compound names */
+            top: 50%;
+
+            position: absolute;
+
+        }
+
+        li span.charge {
+            display: none;
+        }
+
+        li:hover span.name {
+            display: none;
+        }
+
+        li:hover .symbol {
+            display: block;
+            /* Display the symbol on hover */
+        }
+
+        /* Text Animation */
+        .symbol {
+            display: none;
+            /* Hide the symbol by default */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            font-size: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: font-size 0.3s, background-color 0.3s, color 0.3s;
+        }
+
+        li:hover .symbol {
+            font-size: 16px;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #fff;
+        }
+
+        /* Text color based on charge type */
+        .positive-charge .symbol {
+            color: #ff8080;
+            /* Red for positive charge */
+        }
+
+        .negative-charge .symbol {
+            color: #80bfff;
+            /* Blue for negative charge */
+        }
+
+        .neutral-charge .symbol {
+            color: #80ff80;
+            /* Green for neutral charge */
+        }
+
+     @media (max-width: 600px) {
+      ul {
+        flex-direction: column;
+        /* Stack items vertically on mobile */
+      }
+
+      li {
+        width: 100%;
+        /* Set full width on mobile */
+      }
+
+      li .symbol {
+        font-size: 14px;
+        /* Adjust font size for symbol on mobile */
+        padding: 3px 5px;
+      }
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Radical Compounds</h1>
+    </header>
+
+    <h2>Common Radical Compounds</h2>
+    <ul>
+        <!-- Radical Compound 1 -->
+        <li class="neutral-charge">
+            <span class="name">Hydroxyl radical:</span>
+            <span class="charge">OH• (Charge: neutral)</span>
+            <div class="symbol">OH</div>
+        </li>
+        <!-- Radical Compound 2 -->
+        <li class="positive-charge">
+            <span class="name">Nitric oxide radical:</span>
+            <span class="charge">NO• (Charge: positive)</span>
+            <div class="symbol">NO</div>
+        </li>
+        <!-- Radical Compound 3 -->
+        <li class="negative-charge">
+            <span class="name">Superoxide radical:</span>
+            <span class="charge">O2•- (Charge: negative)</span>
+            <div class="symbol">O2</div>
+        </li>
+        <!-- Radical Compound 4 -->
+        <li class="neutral-charge">
+            <span class="name">Carbonate radical:</span>
+            <span class="charge">CO3• (Charge: neutral)</span>
+            <div class="symbol">CO3</div>
+        </li>
+        <!-- Radical Compound 5 -->
+        <li class="positive-charge">
+            <span class="name">Phenyl radical:</span>
+            <span class="charge">C6H5• (Charge: positive)</span>
+            <div class="symbol">C6H5</div>
+        </li>
+        <!-- Radical Compound 6 -->
+        <li class="negative-charge">
+            <span class="name">Ozone:</span>
+            <span class="charge">O3•- (Charge: negative)</span>
+            <div class="symbol">O3</div>
+        </li>
+        <!-- Radical Compound 7 -->
+        <li class="neutral-charge">
+            <span class="name">Methyl radical:</span>
+            <span class="charge">CH3• (Charge: neutral)</span>
+            <div class="symbol">CH3</div>
+        </li>
+        <!-- Radical Compound 8 -->
+        <li class="positive-charge">
+            <span class="name">Carbene radical:</span>
+            <span class="charge">CH2• (Charge: positive)</span>
+            <div class="symbol">CH2</div>
+        </li>
+        <!-- Radical Compound 9 -->
+        <li class="negative-charge">
+            <span class="name">Hydroperoxyl radical:</span>
+            <span class="charge">HO2• (Charge: negative)</span>
+            <div class="symbol">HO2</div>
+        </li>
+        <!-- Radical Compound 10 -->
+        <li class="neutral-charge">
+            <span class="name">Hydroperoxyl radical:</span>
+            <span class="charge">HO2• (Charge: neutral)</span>
+            <div class="symbol">HO2</div>
+        </li>
+        <!-- Add more radical compounds here -->
+        <!-- Radical Compound 11 -->
+        <li class="positive-charge">
+            <span class="name">Ethynyl radical:</span>
+            <span class="charge">C2H• (Charge: positive)</span>
+            <div class="symbol">C2H</div>
+        </li>
+        <!-- Radical Compound 12 -->
+        <li class="negative-charge">
+            <span class="name">Hydrogen peroxide radical:</span>
+            <span class="charge">HO2• (Charge: negative)</span>
+            <div class="symbol">HO2</div>
+        </li>
+        <!-- Radical Compound 13 -->
+        <li class="neutral-charge">
+            <span class="name">Acetyl radical:</span>
+            <span class="charge">C2H3• (Charge: neutral)</span>
+            <div class="symbol">C2H3</div>
+        </li>
+        <!-- Radical Compound 14 -->
+        <li class="positive-charge">
+            <span class="name">Hydrogen radical:</span>
+            <span class="charge">H• (Charge: positive)</span>
+            <div class="symbol">H</div>
+        </li>
+        <!-- Radical Compound 15 -->
+        <li class="negative-charge">
+            <span class="name">Ammonium radical:</span>
+            <span class="charge">NH4• (Charge: negative)</span>
+            <div class="symbol">NH4</div>
+        </li>
+        <!-- Radical Compound 16 -->
+        <li class="neutral-charge">
+            <span class="name">Carboxyl radical:</span>
+            <span class="charge">COOH• (Charge: neutral)</span>
+            <div class="symbol">COOH</div>
+        </li>
+        <!-- Radical Compound 17 -->
+        <li class="positive-charge">
+            <span class="name">Hydronium radical:</span>
+            <span class="charge">H3O• (Charge: positive)</span>
+            <div class="symbol">H3O</div>
+        </li>
+        <!-- Radical Compound 18 -->
+        <li class="negative-charge">
+            <span class="name">Benzyl radical:</span>
+            <span class="charge">C6H5CH2• (Charge: negative)</span>
+            <div class="symbol">C6H5CH2</div>
+        </li>
+        <!-- Radical Compound 19 -->
+        <li class="neutral-charge">
+            <span class="name">Dihydrogen radical:</span>
+            <span class="charge">H2• (Charge: neutral)</span>
+            <div class="symbol">H2</div>
+        </li>
+        <!-- Radical Compound 20 -->
+        <li class="positive-charge">
+            <span class="name">Methylene radical:</span>
+            <span class="charge">CH2• (Charge: positive)</span>
+            <div class="symbol">CH2</div>
+        </li>
+        <!-- Radical Compound 21 -->
+        <li class="negative-charge">
+            <span class="name">Phenoxy radical:</span>
+            <span class="charge">C6H5O• (Charge: negative)</span>
+            <div class="symbol">C6H5O</div>
+        </li>
+        <!-- Radical Compound 22 -->
+        <li class="neutral-charge">
+            <span class="name">Methoxy radical:</span>
+            <span class="charge">CH3O• (Charge: neutral)</span>
+            <div class="symbol">CH3O</div>
+        </li>
+        <!-- Radical Compound 23 -->
+        <li class="positive-charge">
+            <span class="name">Acetylperoxy radical:</span>
+            <span class="charge">C2H3O2• (Charge: positive)</span>
+            <div class="symbol">C2H3O2</div>
+        </li>
+        <!-- Radical Compound 24 -->
+        <li class="negative-charge">
+            <span class="name">Cyanide radical:</span>
+            <span class="charge">CN• (Charge: negative)</span>
+            <div class="symbol">CN</div>
+        </li>
+        <!-- Radical Compound 25 -->
+        <li class="neutral-charge">
+            <span class="name">Allyl radical:</span>
+            <span class="charge">C3H5• (Charge: neutral)</span>
+            <div class="symbol">C3H5</div>
+        </li>
+        <!-- Radical Compound 26 -->
+        <li class="positive-charge">
+            <span class="name">Benzoyl radical:</span>
+            <span class="charge">C7H5O• (Charge: positive)</span>
+            <div class="symbol">C7H5O</div>
+        </li>
+        <!-- Radical Compound 27 -->
+        <li class="negative-charge">
+            <span class="name">Ethoxy radical:</span>
+            <span class="charge">C2H5O• (Charge: negative)</span>
+            <div class="symbol">C2H5O</div>
+        </li>
+        <!-- Radical Compound 28 -->
+        <li class="neutral-charge">
+            <span class="name">Isopropyl radical:</span>
+            <span class="charge">C3H7• (Charge: neutral)</span>
+            <div class="symbol">C3H7</div>
+        </li>
+        <!-- Radical Compound 29 -->
+        <li class="positive-charge">
+            <span class="name">Phenylperoxy radical:</span>
+            <span class="charge">C6H5O2• (Charge: positive)</span>
+            <div class="symbol">C6H5O2</div>
+        </li>
+        <!-- Radical Compound 30 -->
+        <li class="negative-charge">
+            <span class="name">Methanesulfonate radical:</span>
+            <span class="charge">CH3SO3• (Charge: negative)</span>
+            <div class="symbol">CH3SO3</div>
+        </li>
+        <!-- Radical Compound 31 -->
+        <li class="neutral-charge">
+            <span class="name">Peroxy radical:</span>
+            <span class="charge">HO2• (Charge: neutral)</span>
+            <div class="symbol">HO2</div>
+        </li>
+        <!-- Radical Compound 32 -->
+        <li class="positive-charge">
+            <span class="name">Peroxyacetyl radical:</span>
+            <span class="charge">C2H3O3• (Charge: positive)</span>
+            <div class="symbol">C2H3O3</div>
+        </li>
+        <!-- Radical Compound 33 -->
+        <li class="negative-charge">
+            <span class="name">Peroxymethyl radical:</span>
+            <span class="charge">CH3O3• (Charge: negative)</span>
+            <div class="symbol">CH3O3</div>
+        </li>
+        <!-- Radical Compound 34 -->
+        <li class="neutral-charge">
+            <span class="name">Formyl radical:</span>
+            <span class="charge">HCO• (Charge: neutral)</span>
+            <div class="symbol">HCO</div>
+        </li>
+        <!-- Radical Compound 35 -->
+        <li class="positive-charge">
+            <span class="name">Hydroperoxyalkyl radical:</span>
+            <span class="charge">RO2• (Charge: positive)</span>
+            <div class="symbol">RO2</div>
+        </li>
+        <!-- Radical Compound 36 -->
+        <li class="negative-charge">
+            <span class="name">Perhydroxyl radical:</span>
+            <span class="charge">HO3• (Charge: negative)</span>
+            <div class="symbol">HO3</div>
+        </li>
+        <!-- Radical Compound 37 -->
+        <li class="neutral-charge">
+            <span class="name">Carbonyl radical:</span>
+            <span class="charge">CO• (Charge: neutral)</span>
+            <div class="symbol">CO</div>
+        </li>
+        <!-- Radical Compound 38 -->
+        <li class="positive-charge">
+            <span class="name">Vinyl radical:</span>
+            <span class="charge">C2H3• (Charge: positive)</span>
+            <div class="symbol">C2H3</div>
+        </li>
+        <!-- Radical Compound 39 -->
+        <li class="negative-charge">
+            <span class="name">Aminyl radical:</span>
+            <span class="charge">NH2• (Charge: negative)</span>
+            <div class="symbol">NH2</div>
+        </li>
+        <!-- Radical Compound 40 -->
+        <li class="neutral-charge">
+            <span class="name">Thiyl radical:</span>
+            <span class="charge">HS• (Charge: neutral)</span>
+            <div class="symbol">HS</div>
+        </li>
+        <!-- Radical Compound 41 -->
+        <li class="positive-charge">
+            <span class="name">Carboxymethyl radical:</span>
+            <span class="charge">CH2COOH• (Charge: positive)</span>
+            <div class="symbol">CH2COOH</div>
+        </li>
+        <!-- Radical Compound 42 -->
+        <li class="negative-charge">
+            <span class="name">Ethylperoxy radical:</span>
+            <span class="charge">C2H5O2• (Charge: negative)</span>
+            <div class="symbol">C2H5O2</div>
+        </li>
+        <!-- Radical Compound 43 -->
+        <li class="neutral-charge">
+            <span class="name">Phenylsulfonate radical:</span>
+            <span class="charge">C6H5SO3• (Charge: neutral)</span>
+            <div class="symbol">C6H5SO3</div>
+        </li>
+        <!-- Radical Compound 44 -->
+        <li class="positive-charge">
+            <span class="name">Ethyl radical:</span>
+            <span class="charge">C2H5• (Charge: positive)</span>
+            <div class="symbol">C2H5</div>
+        </li>
+        <!-- Radical Compound 45 -->
+        <li class="negative-charge">
+            <span class="name">Methanesulfonyl radical:</span>
+            <span class="charge">CH3SO2• (Charge: negative)</span>
+            <div class="symbol">CH3SO2</div>
+        </li>
+        <!-- Radical Compound 46 -->
+        <li class="neutral-charge">
+            <span class="name">Carbonylsulfide radical:</span>
+            <span class="charge">COS• (Charge: neutral)</span>
+            <div class="symbol">COS</div>
+        </li>
+        <!-- Radical Compound 47 -->
+        <li class="positive-charge">
+            <span class="name">n-Propyl radical:</span>
+            <span class="charge">C3H7• (Charge: positive)</span>
+            <div class="symbol">C3H7</div>
+        </li>
+        <!-- Radical Compound 48 -->
+        <li class="negative-charge">
+            <span class="name">Sulfide radical:</span>
+            <span class="charge">S• (Charge: negative)</span>
+            <div class="symbol">S</div>
+        </li>
+        <!-- Radical Compound 49 -->
+        <li class="neutral-charge">
+            <span class="name">Hydroxylperoxy radical:</span>
+            <span class="charge">HO2• (Charge: neutral)</span>
+            <div class="symbol">HO2</div>
+        </li>
+        <!-- Radical Compound 50 -->
+        <li class="positive-charge">
+            <span class="name">Thiohydroxyl radical:</span>
+            <span class="charge">HS• (Charge: positive)</span>
+            <div class="symbol">HS</div>
+        </li>
+        <!-- Add more radical compounds here -->
+    </ul>
+    <script>
+        // Function to convert numbers to subscript
+        function convertToSubscript(number) {
+            const subscriptMap = {
+                '0': '₀',
+                '1': '₁',
+                '2': '₂',
+                '3': '₃',
+                '4': '₄',
+                '5': '₅',
+                '6': '₆',
+                '7': '₇',
+                '8': '₈',
+                '9': '₉'
+            };
+
+            return String(number).split('').map(char => subscriptMap[char] || char).join('');
+        }
+
+        // Get the charge text elements
+        const chargeElements = document.querySelectorAll('.symbol');
+
+        // Convert numbers to subscript for each charge element
+        chargeElements.forEach(chargeElement => {
+            const originalText = chargeElement.textContent;
+            const modifiedText = originalText.replace(/\d+/g, match => convertToSubscript(match));
+
+            // Create a new text node with the modified content
+            const newText = document.createTextNode(modifiedText);
+
+            // Replace the existing text node with the new text node
+            chargeElement.textContent = '';
+            chargeElement.appendChild(newText);
+        });
+
+    </script>
+</body>
+
+</html>
